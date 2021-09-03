@@ -1,24 +1,16 @@
+const path = require('path');
+const webpack = require('webpack');
+const pkg = require('../package.json');
+
 const {
   VueLoaderPlugin
 } = require('vue-loader')
 
+function resolve(dir) {
+  return path.join(__dirname, '..', dir);
+}
+
 module.exports = {
-  mode: 'production',
-  output: {
-    libraryExport: 'default',
-    library: "RING",
-    libraryTarget: "umd",
-    umdNamedDefine: true,
-    globalObject: 'typeof self !== \'undefined\' ? self : this'
-  },
-  externals: {
-    vue: {
-      root: 'Vue',
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      amd: 'vue'
-    }
-  },
   module: {
     rules: [{
         test: /\.vue$/,
@@ -33,8 +25,11 @@ module.exports = {
       // 以及 `.vue` 文件中的 `<script>` 块
       {
         test: /\.js$/,
-        exclude: /node_modules/,
         loader: 'babel-loader',
+        options: {
+          sourceMap: true,
+        },
+        exclude: /node_modules/,
       },
       // 它会应用到普通的 `.css` 文件
       {
@@ -43,6 +38,17 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      // scss支持
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader" // 将 JS 字符串生成为 style 节点
+        }, {
+          loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+        }, {
+          loader: "sass-loader" // 将 Sass 编译成 CSS
+        }]
       },
       {
         test: /\.(png|jpg|gif|woff|svg|eot|ttf)$/,
@@ -55,8 +61,18 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.vue'],
+    alias: {
+      'vue': 'vue/dist/vue.esm.js',
+      '@': resolve('src')
+    }
+  },
   plugins: [
-    // 请确保引入这个插件来施展魔法
+    new webpack.DefinePlugin({
+      'process.env.VERSION': `'${pkg.version}'`
+    }),
+    // 请确保引入这个插件！
     new VueLoaderPlugin()
   ]
 }
