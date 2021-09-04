@@ -8,6 +8,8 @@
     "build:prod": "webpack --config build/webpack.prod.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "deploy:build": "npm run docs:build && npm run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -43,8 +45,8 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "html-webpack-plugin": "^5.3.2",
-    "node-sass-install": "^1.0.2",
-    "sass-loader": "^12.1.0",
+    "sass": "^1.39.0",
+    "sass-loader": "7.3.1",
     "style-loader": "^3.2.1",
     "url-loader": "^4.1.1",
     "vue-loader": "^15.9.8",

@@ -1,7 +1,18 @@
-import Vue from 'vue'
-import App from './index.vue'
+import Button from '../packages/button';
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+const components = [
+  Button,
+]
+
+const install = function(Vue, opts = {}) {
+  // 全局注册组件
+  components.forEach(component => {
+    Vue.component(component.name, component)
+  })
+
+}
+
+export default {
+  version: '0.0.1',
+  install
+}

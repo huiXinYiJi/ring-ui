@@ -47,7 +47,11 @@ module.exports = {
         }, {
           loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
         }, {
-          loader: "sass-loader" // 将 Sass 编译成 CSS
+          loader: "sass-loader", // 将 Sass 编译成 CSS
+          options: {
+            // Prefer `dart-sass`
+            implementation: require("sass"),
+          },
         }]
       },
       {
