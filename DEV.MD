@@ -11,38 +11,50 @@
 ```bash
 npm init
 
-// vue 必须依赖
+# vue 必须依赖
 yarn add vue --peer
 
-// webpack4相关
+# webpack4相关
 yarn add webpack webpack-cli webpack-dev-server html-webpack-plugin --dev
 yarn add webpack-merge --dev
 
-// vue相关
+# vue相关
 yarn add vue-loader vue-template-compiler --dev
 
-// gulp相关 打包样式
+# gulp相关 打包样式
 yarn add gulp gulp-autoprefixer gulp-clean-css  gulp-sass gulp-rename --dev
 
-// 样式处理
+# 样式处理
 yarn add css-loader style-loader --dev
 // dart sass
 yarn add sass sass-loader --dev
 
-// Loads files as base64 encoded URL
+# Loads files as base64 encoded URL
 yarn add url-loader --dev
 
-// babel相关
+# babel相关
 yarn add @babel/cli babel-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime --dev
 
-// 跨平台设置和使用环境变量
+# 跨平台设置和使用环境变量
 yarn add cross-env --dev
 
-// 文档相关
+# 文档相关
 yarn add vuepress --dev
 
-// 部署github pages
+# 部署github pages
 yarn add gh-pages --dev
+```
+
+### 打包发布到npm
+```bash
+# 打包
+yarn dist
+
+# 发布到npm
+# 需要先在npm上注册一个账号
+npm login
+
+npm publish
 ```
 
 ### vuepress

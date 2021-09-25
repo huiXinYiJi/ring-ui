@@ -2,7 +2,7 @@
   "name": "ring-ui",
   "version": "1.0.0",
   "description": "A Vue.js 2.0 Web UI Toolkit",
-  "main": "index.js",
+  "main": "lib/ring-ui.min.js",
   "scripts": {
     "build:style": "gulp --gulpfile build/gen-style.js",
     "build:prod": "webpack --config build/webpack.prod.js",
@@ -10,6 +10,8 @@
     "docs:build": "vuepress build docs",
     "deploy": "gh-pages -d docs/.vuepress/dist",
     "deploy:build": "npm run docs:build && npm run deploy",
+    "build:components": "webpack --config build/webpack.component.js",
+    "dist": "npm run build:style && npm run build:prod && npm run build:components",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

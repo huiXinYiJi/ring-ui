@@ -2,23 +2,21 @@ const path = require('path');
 const webpack = require('webpack');
 const {merge} = require('webpack-merge');
 const webpackBaseConfig = require('./webpack.base.js');
+const components = require('../components.json')
 
 module.exports = merge(webpackBaseConfig, {
-  mode: "production",
   devtool: 'source-map',
-  entry: {
-    main: path.resolve(__dirname, '../src/index.js')  // 将src下的index.js 作为入口点
-  },
+  mode: "production",
+  entry: components,
   output: {
     path: path.resolve(__dirname, '../lib'),
     publicPath: '/lib/',
-    filename: 'ring-ui.min.js',  // 改成自己的类库名
-    library: 'ring-ui', // 类库导出
+    filename: '[name].js',
+    chunkFilename: '[id].js',
     libraryTarget: 'umd',
-    umdNamedDefine: true,
-    globalObject: 'typeof self !== \'undefined\' ? self : this'
+    umdNamedDefine: true
   },
-  externals: { // 外部化对vue的依赖
+  externals: {
     vue: {
       root: 'Vue',
       commonjs: 'vue',
@@ -32,3 +30,4 @@ module.exports = merge(webpackBaseConfig, {
     })
   ]
 });
+

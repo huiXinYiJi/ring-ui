@@ -1,7 +1,9 @@
 import Button from '../packages/button';
+import Notice from '../packages/notice'
 
 const components = [
   Button,
+  Notice
 ]
 
 const install = function(Vue, opts = {}) {
@@ -10,6 +12,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(component.name, component)
   })
 
+  Vue.prototype.$notice = Notice
 }
 
 export default {
