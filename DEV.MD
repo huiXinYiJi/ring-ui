@@ -1,13 +1,15 @@
 ### 介绍
+
 > 技术选型：vue2
 
 > 文档：vuepress
 
-> css: scss，BEM风格
+> css: scss，BEM 风格
 
 ### 开发记录
 
 ### 安装依赖
+
 ```bash
 npm init
 
@@ -45,13 +47,15 @@ yarn add vuepress --dev
 yarn add gh-pages --dev
 ```
 
-### 打包发布到npm
+### 打包发布到 npm
+
 ```bash
 # 打包
 yarn dist
 
 # 发布到npm
 # 需要先在npm上注册一个账号
+# package.json中，files属性内添加想发布到npm的文件
 npm login
 
 npm publish
@@ -59,12 +63,10 @@ npm publish
 
 ### vuepress
 
-sass-loader报错时，可降低版本(7.3.1)试试
-
+sass-loader 报错时，可降低版本(7.3.1)试试
 
 > 参考
-> 
+>
 > [搭建流程](https://juejin.cn/post/6844903929633849357#heading-6)
-> 
-> [BEM介绍](https://www.jianshu.com/p/1c0b77f30ec0)
-
+>
+> [BEM 介绍](https://www.jianshu.com/p/1c0b77f30ec0)

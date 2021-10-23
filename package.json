@@ -1,8 +1,13 @@
 {
   "name": "ring-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A Vue.js 2.0 Web UI Toolkit",
   "main": "lib/ring-ui.min.js",
+  "files": [
+    "lib",
+    "src",
+    "packages"
+  ],
   "scripts": {
     "build:style": "gulp --gulpfile build/gen-style.js",
     "build:prod": "webpack --config build/webpack.prod.js",
