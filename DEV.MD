@@ -65,6 +65,8 @@ npm publish
 
 sass-loader 报错时，可降低版本(7.3.1)试试
 
+### vuepress 中代码演示
+
 > 参考
 >
 > [搭建流程](https://juejin.cn/post/6844903929633849357#heading-6)

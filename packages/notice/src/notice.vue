@@ -1,26 +1,24 @@
 <template>
-  <div class="ring-notice">
-    <div class="ring-notice__main">
-      <div class="ring-notice__title">{{ title }}</div>
-      <div class="ring-notice__content">{{ content }}</div>
+  <div class="r-notice">
+    <div class="r-notice__main">
+      <div class="r-notice__title">{{ title }}</div>
+      <div class="r-notice__content">{{ content }}</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RingNotice',
+  name: "RNotice",
   data() {
     return {
-      title: '',
-      content: ''
-    }
+      title: "",
+      content: "",
+    };
   },
   mounted() {
     console.log(this.title);
   },
-  methods: {
-
-  }
-}
+  methods: {},
+};
 </script>

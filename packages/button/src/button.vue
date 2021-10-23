@@ -1,20 +1,23 @@
 <template>
-  <button class="ring-button" :class="[type ? 'ring-button--' + type : '']" type="button">
+  <button
+    class="r-button"
+    :class="[type ? 'r-button--' + type : '']"
+    type="button"
+  >
     <slot></slot>
   </button>
 </template>
 
 <script>
 export default {
-  name: 'RingButton',
+  name: "RButton",
   props: {
     type: {
       type: String,
-      default: 'default'
-    }
-  }
-}
+      default: "default",
+    },
+  },
+};
 </script>
 
-<style>
-</style>
+<style></style>
