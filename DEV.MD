@@ -67,6 +67,10 @@ sass-loader 报错时，可降低版本(7.3.1)试试
 
 ### vuepress 中代码演示
 
+### CSS BEM 命名规范
+
+> block-name\_\_element-name--modifier-name，也就是模块名 + 元素名 + 修饰器名
+
 > 参考
 >
 > [搭建流程](https://juejin.cn/post/6844903929633849357#heading-6)
