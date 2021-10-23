@@ -25,3 +25,4 @@ build/bin/algolia-key.js
 .history
 .cache
 .temp
+docs/.vuepress/dist
