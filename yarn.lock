@@ -1032,6 +1032,21 @@
   resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.1.tgz#d8f1c0d0dc23afad6dc16a9e993a0865774b4065"
   integrity sha512-xoDlM2S4ortawSWORYqsdU+2rxdh4LRW9ytc3zmT37RIKQh6IHyKwwtKhKis9ah8ol07DCkZxPt8BBvPjC6v4g==
 
+"@v2icons/fluent@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@v2icons/fluent/-/fluent-0.11.0.tgz#3fb43dea68b3e836b2f409c8369868c2ccd24919"
+  integrity sha512-KjkRqQ1gRotnkOqQ+tp1XcTN9nF92x6h35BDPohgXTxelcqxx2ap2Mp5EYk6KOh9rtk6Fjp71+JQFg6XFVvznw==
+
+"@v2icons/ionicons4@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@v2icons/ionicons4/-/ionicons4-0.11.0.tgz#45c260d959f63509d77cb4dafe2d5d1763f823b6"
+  integrity sha512-RbkTSkQtguiXh6vRv3IoonM4tu4Bb5sAzmvU+ow3VymM0B5XVin+Mkz9ttK/bXQhpE6rNpb+gIafDkSZ/nCOXQ==
+
+"@v2icons/ionicons5@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@v2icons/ionicons5/-/ionicons5-0.11.0.tgz#9dec95a5d4e88869a37fcff00c490a2bd1443bb4"
+  integrity sha512-32fHe7S5aRm7aU7DY+zDBoJRevODx720DWmEKw6SiDs+DSQz+iU8xLKOisLpy18pHGvL4831kgZMMUCxCPQfLg==
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@vue/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-1.2.1.tgz#31624a7a505fb14da1d58023725a4c5f270e6a81"

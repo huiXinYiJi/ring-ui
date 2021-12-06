@@ -45,6 +45,9 @@ yarn add vuepress --dev
 
 # 部署github pages
 yarn add gh-pages --dev
+
+# icon图标使用 > xions(https://www.xicons.org)
+yarn add -D @v2icons/fluent @v2icons/ionicons4 @v2icons/ionicons5
 ```
 
 ### 打包发布到 npm
